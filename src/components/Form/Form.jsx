@@ -4,10 +4,12 @@ import style from "./Form.module.scss";
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
+import FormStore from "../../store/Form";
+
 
 const Form = (props) => {
-  const {setDataForm, store} = props;
-
+  const {setDataForm, state} = props;
+  
   const validationSchema = Yup.object().shape({
     name: Yup.string()
               .required('Поле обязательно для заполнения.'),
@@ -25,6 +27,8 @@ const Form = (props) => {
     return (
         <form onSubmit={handleSubmit(setDataForm)}>
           <div>
+            <h1>{state.name}</h1>
+            <h1>{state.surname}</h1>
             <input placeholder="Имя"
                    type="text"
                    className={errors.name && style.inCorrect ||touchedFields.name && style.correct }

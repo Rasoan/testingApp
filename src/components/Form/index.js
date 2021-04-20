@@ -1,16 +1,17 @@
 import React from "react";
 import Form from "./Form";
+import FormStore from "../../store/Form";
+import { observer } from "mobx-react-lite";
 
-const FormCOntainer = (props) => {
-  const {store} = props;
-  
+const FormCOntainer = observer(() => {
+
   const setDataForm = (data) => {
-    console.log("hello")
-    console.log(data);
+    FormStore.setState(data.name, data.surname);
   }
 
+  
   return <Form setDataForm={setDataForm}
-               store={store} />;
-}
+               state={FormStore.state} />;
+});
 
 export default FormCOntainer;

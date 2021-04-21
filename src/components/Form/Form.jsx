@@ -30,14 +30,6 @@ const Form = (props) => {
           <div className={style.wrapperElementForm}>
             <h2 className={style.headerForm}>Формочка</h2>
           </div>
-          <p className={style.headerInput}>Введите ваше имя</p>
-          <div className={style.wrapperElementForm}>
-            <input placeholder="Имя"
-                   type="text"
-                   className={style.input + " " + (errors.name && style.inCorrect ||touchedFields.name && style.correct || "")}
-                   {...register("name")} />
-                   {errors.name && <p className={style.promptForm}>{errors.name.message}</p>}
-          </div>
           <p className={style.headerInput}>Введите вашу фамилию</p>
           <div className={style.wrapperElementForm}>
             <input placeholder="Фамилия"
@@ -45,6 +37,14 @@ const Form = (props) => {
                    type="text"
                    {...register("surname")} />
                    {errors.surname && <p className={style.promptForm}>{errors.surname.message}</p>}
+          </div>
+          <p className={style.headerInput}>Введите ваше имя</p>
+          <div className={style.wrapperElementForm}>
+            <input placeholder="Имя"
+                   type="text"
+                   className={style.input + " " + (errors.name && style.inCorrect ||touchedFields.name && style.correct || "")}
+                   {...register("name")} />
+                   {errors.name && <p className={style.promptForm}>{errors.name.message}</p>}
           </div>
           <div className={style.wrapperElementForm}>
             <button className={style.button}>Готово</button>

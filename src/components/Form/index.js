@@ -11,8 +11,7 @@ const FormCOntainer = observer(() => {
   }
 
   
-  return <Form setDataForm={setDataForm}
-               state={FormStore.state} />;
+  return <Form setDataForm={setDataForm} />;
 });
 
 export default FormCOntainer;

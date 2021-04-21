@@ -1,5 +1,6 @@
 import {makeAutoObservable, makeObserver} from "mobx";
 class FormStore {
+  modalVisibility = false;
   state = {
     name: "null",
     surname: "null",
@@ -12,6 +13,10 @@ class FormStore {
   setState(name, surname) {
     this.state.name = name;
     this.state.surname = surname;
+  }
+
+  toggleModal(flag) {
+    this.modalVisibility = flag;
   }
 }
 

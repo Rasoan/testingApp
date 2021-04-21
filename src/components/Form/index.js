@@ -7,6 +7,7 @@ const FormCOntainer = observer(() => {
 
   const setDataForm = (data) => {
     FormStore.setState(data.name, data.surname);
+    FormStore.toggleModal(true);
   }
 
   

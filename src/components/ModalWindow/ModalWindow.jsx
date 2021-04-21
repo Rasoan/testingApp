@@ -6,14 +6,14 @@ import { autorun } from 'mobx'
 
 
 const ModalWindow = (props) => {
-    const {closeModalWindow, name, surname} = props;
+    const {closeModalWindow, name, surname, modalVisibility} = props;
     const upHandler = ({key}) => {
       if(key === "Escape" || key === "Enter") closeModalWindow();
     }
 
     React.useEffect(() => {
       autorun(() => {
-        window.addEventListener("keyup", upHandler);
+        window.addEventListener("keydown", upHandler);
       });
     },[])
 

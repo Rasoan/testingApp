@@ -33,6 +33,7 @@ const Form = (props) => {
           <p className={style.headerInput}>Введите вашу фамилию</p>
           <div className={style.wrapperElementForm}>
             <input placeholder="Фамилия"
+                   autoComplete="off"
                    className={style.input + " " + (errors.surname && style.inCorrect ||touchedFields.surname && style.correct || "")}
                    type="text"
                    {...register("surname")} />
@@ -41,6 +42,7 @@ const Form = (props) => {
           <p className={style.headerInput}>Введите ваше имя</p>
           <div className={style.wrapperElementForm}>
             <input placeholder="Имя"
+                   autoComplete="off"
                    type="text"
                    className={style.input + " " + (errors.name && style.inCorrect ||touchedFields.name && style.correct || "")}
                    {...register("name")} />

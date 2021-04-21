@@ -12,7 +12,8 @@ const ModalWindowContainer = observer((props) => {
 
     return <ModalWindow closeModalWindow={closeModalWindow}
                         name={FormStore.state.name}
-                        surname={FormStore.state.surname} />
+                        surname={FormStore.state.surname}
+                        modalVisibility={FormStore.modalVisibility} />
 });
 
 export default ModalWindowContainer;

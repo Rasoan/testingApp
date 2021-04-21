@@ -30,6 +30,7 @@ const Form = (props) => {
           <div className={style.wrapperElementForm}>
             <h2 className={style.headerForm}>Формочка</h2>
           </div>
+          <p className={style.headerInput}>Введите ваше имя</p>
           <div className={style.wrapperElementForm}>
             <input placeholder="Имя"
                    type="text"
@@ -37,6 +38,7 @@ const Form = (props) => {
                    {...register("name")} />
                    {errors.name && <p className={style.promptForm}>{errors.name.message}</p>}
           </div>
+          <p className={style.headerInput}>Введите вашу фамилию</p>
           <div className={style.wrapperElementForm}>
             <input placeholder="Фамилия"
                    className={style.input + " " + (errors.surname && style.inCorrect ||touchedFields.surname && style.correct || "")}

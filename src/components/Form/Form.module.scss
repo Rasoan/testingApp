@@ -53,6 +53,14 @@
   border: 4px solid black;
 }
 
+.headerInput {
+  margin: 0;
+  padding: 0;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+}
+
 .button {
   width: 80%;
   background-color: black;
@@ -107,6 +115,7 @@
     min-height: 80px;
     margin: 10px auto;
   }
+  
 
   .input {
     border: 4px solid black;
@@ -134,7 +143,7 @@
     font-size: 50px;
   }
 
-  .input, .button, .promptForm {
+  .input, .headerInput, .button, .promptForm {
     font-size: 30px;
   }
 }
@@ -157,7 +166,7 @@
     font-size: 30px;
   }
 
-  .input, .button, .promptForm {
+  .input, .headerInput, .button, .promptForm {
     font-size: 25px;
   }
 }
@@ -177,7 +186,7 @@
     margin: 2px auto;
   }
 
-  .input, .button, .promptForm {
+  .input, .headerInput, .button, .promptForm {
     font-size: 15px;
   }
 
@@ -205,7 +214,7 @@
     width: 250px;
   }
 
-  .input, .button, .promptForm {
+  .input, .headerInput, .button, .promptForm {
     font-size: 13px;
   }
 

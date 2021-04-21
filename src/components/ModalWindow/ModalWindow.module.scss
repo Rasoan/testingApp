@@ -42,10 +42,6 @@
   text-overflow: ellipsis;
 }
 
-.itemContainerButtonClose {
-
-}
-
 .buttonClose {
    position: absolute;
    top: 0;
@@ -56,6 +52,11 @@
    color: black;
    font-size: 40px;
    font-weight: bold;
+   &:hover {
+     cursor: pointer;
+     background-color: black;
+     color: red;
+   }
 }
 
 .okModalWindow {
@@ -63,13 +64,14 @@
   height: 50px;
   font-size: 38px;
   margin: auto auto 20px;
+  &:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+  }
 }
 
 
-
-
-  
-  
   @media (max-width: 2000px) {
     .modalContainer {
       top: calc(30% - 150px);

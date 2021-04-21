@@ -28,7 +28,7 @@ const Form = (props) => {
       <div className={style.formContainer}>
         <form onSubmit={handleSubmit(setDataForm)} className={style.formSubmit}>
           <div className={style.wrapperElementForm}>
-            <h2 className={style.headerForm}>Формачка</h2>
+            <h2 className={style.headerForm}>Форма</h2>
           </div>
           <p className={style.headerInput}>Введите вашу фамилию</p>
           <div className={style.wrapperElementForm}>
